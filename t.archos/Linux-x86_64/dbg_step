@@ -171,10 +171,10 @@ FILE=../../bins/elf/calls_x64
 ARGS='-a x86 -d'
 BROKEN=
 CMDS='dcu main
-dcu 0x0040057c
+dsu 0x400546
 dr rip
 '
-EXPECT='0x0040057c
+EXPECT='0x00400546
 Hello world
 '
 run_test
