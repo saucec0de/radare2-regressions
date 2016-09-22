@@ -101,3 +101,19 @@ EXPECT='0x0040052f
 Hello world
 '
 run_test
+
+NAME='dso on call'
+FILE=../../bins/elf/calls_x64
+ARGS='-a x86 -d'
+BROKEN=
+CMDS='dcu main
+ds
+dr rip
+dso
+dr rip
+dk 9
+'
+EXPECT='0x00400575
+0x0040057c
+'
+run_test
